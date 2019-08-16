@@ -1,4 +1,5 @@
-T = table("fdsfds"+newline+"gggg", datetime, 'VariableNames', {'message' 'duedate'});
+T = cell2table(cell(0, 3), 'VariableNames', {'code' 'message' 'duedate'});
+T = [T; {datestr(datetime, 'yymmddHHMMss'), char("fdsfds"+newline+"gggg"), datetime}];
 json_write(1, 'alerts.json', T, true)
 
 

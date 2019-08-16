@@ -134,6 +134,20 @@ classdef ExponentaDev < handle
             disp('Docs have been generated');
         end
         
+        function setver(obj, vp)
+            % Set version
+            ppath = obj.ext.getppath();
+            if obj.ext.type == "toolbox"
+                matlab.addons.toolbox.toolboxVersion(ppath, vp);
+            else
+                txt = obj.ext.readtxt(ppath);
+                txt = regexprep(txt, '(?<=(<param.version>))(.*?)(?=(</param.version>))', vp);
+                txt = strrep(txt, '<param.version />', '');
+                obj.ext.writetxt(txt, ppath);
+            end
+            obj.gvp();
+        end
+        
         function webrel(obj)
             % Open GitHub releases webpage
             obj.ext.webrel();
@@ -173,20 +187,6 @@ classdef ExponentaDev < handle
             service.removeToolboxRoot(pr);
             service.setToolboxRoot(pr, obj.ext.root);
             service.closeProject(pr);
-        end
-        
-        function setver(obj, vp)
-            % Set version
-            ppath = obj.ext.getppath();
-            if obj.ext.type == "toolbox"
-                matlab.addons.toolbox.toolboxVersion(ppath, vp);
-            else
-                txt = obj.ext.readtxt(ppath);
-                txt = regexprep(txt, '(?<=(<param.version>))(.*?)(?=(</param.version>))', vp);
-                txt = strrep(txt, '<param.version />', '');
-                obj.ext.writetxt(txt, ppath);
-            end
-            obj.gvp();
         end
         
         function seticons(obj)

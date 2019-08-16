@@ -3,7 +3,7 @@
    <name>Exponenta</name>
    <pname>Exponenta.prj</pname>
    <type>toolbox</type>
-   <remote/>
+   <remote>https://github.com/ETMC-Exponenta/ExponentaToolbox</remote>
    <extv>1.9.1</extv>
 </config>
 <!--Toolbox Extender configuration file. DO NOT DELETE-->

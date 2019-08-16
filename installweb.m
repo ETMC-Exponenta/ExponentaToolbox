@@ -1,5 +1,5 @@
 % Generated with Toolbox Extender https://github.com/ETMC-Exponenta/ToolboxExtender
-instURL = 'https://api.github.com/repos//releases/latest';
+instURL = 'https://api.github.com/repos/ETMC-Exponenta/ExponentaToolbox/releases/latest';
 [~, instName] = fileparts(fileparts(fileparts(instURL)));
 instRes = webread(instURL);
 fprintf('Downloading %s %s\n', instName, instRes.name);
