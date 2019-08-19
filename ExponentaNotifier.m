@@ -6,8 +6,9 @@ classdef ExponentaNotifier < handle
         Name
         Updater
         Data
-        GetDataCallback
+        DataRecievedFcn
         Offline = false
+        DownloadTimeout = 10
         DataPath = 'data/notifications.json'
         Key = 'Notifications'
         NotifierName = 'Exponenta App'
@@ -23,10 +24,10 @@ classdef ExponentaNotifier < handle
             obj.Offline = ~obj.Updater.isonline();
             obj.Data = obj.readNotifications();
             if nargin > 0
-                obj.GetDataCallback = cbfun;
+                obj.DataRecievedFcn = cbfun;
             end
             obj.updateNotifications();
-            Async(@(~)obj.downloadNotifications, 2);
+            Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
         end
         
         function downloadNotifications(obj)
@@ -43,15 +44,17 @@ classdef ExponentaNotifier < handle
             end
             if ~obj.Offline
                 if isempty(data)
-                    obj.Data = [];
+                    data = [];
                 else
-                    if isempty(obj.Data)
-                        obj.Data = data;
-                        obj.Data.read = false(height(data), 1);
-                    else
-                        obj.Data = innerjoin(data, obj.Data(:, {'code' 'read'}), 'Keys', 'code');
+                    if ~isempty(obj.Data)
+                        try
+                            data0 = obj.Data(:, {'code' 'checked'});
+                            datatemp = outerjoin(data, data0, 'Keys', 'code', 'type', 'left');
+                            data.checked = any(datatemp{:, {'checked_data' 'checked_data0'}}, 2);
+                        end
                     end
                 end
+                obj.Data = data;
                 obj.updateNotifications();
                 obj.setIcon();
             end
@@ -64,8 +67,8 @@ classdef ExponentaNotifier < handle
                 obj.Data = N(N.duedate >= datetime('today'), :);
                 obj.saveNotifications();
             end
-            if ~isempty(obj.GetDataCallback)
-                obj.GetDataCallback(obj.Data);
+            if ~isempty(obj.DataRecievedFcn)
+                obj.DataRecievedFcn(obj.Data);
             end
         end
         
@@ -83,15 +86,15 @@ classdef ExponentaNotifier < handle
            setpref(obj.Name, obj.Key, obj.Data);
         end
         
-        function markRead(obj, code, mark)
-            %% Mark notification as read
+        function markChecked(obj, code, mark)
+            %% Mark notification as checked
             if ~isempty(obj.Data)
                 cond = obj.Data.code == string(code);
                 if nargin > 2
-                    obj.Data.read(cond) = mark;
+                    obj.Data.checked(cond) = mark;
                 else
-                    state = obj.Data.read(cond);
-                    obj.Data.read(cond) = ~state;
+                    state = obj.Data.checked(cond);
+                    obj.Data.checked(cond) = ~state;
                 end
                 obj.saveNotifications();
                 obj.setIcon();
@@ -101,7 +104,7 @@ classdef ExponentaNotifier < handle
         function num = getUnreadNum(obj)
             %% Get number of unread notifications
             if ~isempty(obj.Data)
-                num = nnz(~obj.Data.read);
+                num = nnz(~obj.Data.checked);
             else
                 num = 0;
             end
@@ -113,7 +116,7 @@ classdef ExponentaNotifier < handle
                 favs = com.mathworks.mlwidgets.favoritecommands.FavoriteCommands.getInstance();
                 c0 = favs.getCommandProperties(obj.NotifierName, obj.Name);
                 c1 = favs.getCommandProperties(obj.NotifierName, obj.Name);
-                if isempty(obj.Data) || all(obj.Data.read)
+                if isempty(obj.Data) || all(obj.Data.checked)
                     c1.setIconName(obj.IconDefault);
                 else
                     c1.setIconName(obj.IconNotify);
