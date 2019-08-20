@@ -39,7 +39,11 @@ classdef ExponentaNotifier < handle
                 for i = 1 : height(data)
                     notifications{i} = obj.showNotification(parent, data(i, :), checkfcn);
                 end
-                delete(obj.UISnackbars);
+                if ~isempty(obj.UISnackbars)
+                    for i = 1 : length(obj.UISnackbars)
+                        delete(obj.UISnackbars(i));
+                    end
+                end
                 obj.UISnackbars = flipud(vertcat(notifications{:}));
                 pos = get(vertcat(obj.UISnackbars.Root), 'Position');
                 pos = uialign(vertcat(pos{:}), parent, 'center', 'top', true, [0 -15], 'VertDist', 5);
@@ -81,8 +85,10 @@ classdef ExponentaNotifier < handle
                     if ~isempty(obj.Data)
                         try
                             data0 = obj.Data(:, {'code' 'checked'});
-                            datatemp = outerjoin(data, data0, 'Keys', 'code', 'type', 'left');
-                            data.checked = any(datatemp{:, {'checked_data' 'checked_data0'}}, 2);
+                            [datatemp, ia] = outerjoin(data, data0, 'Keys', 'code', 'type', 'left');
+                            checked = any(datatemp{:, {'checked_data' 'checked_data0'}}, 2);
+                            [~, ia] = sort(ia);
+                            data.checked = checked(ia);
                         end
                     end
                 end
