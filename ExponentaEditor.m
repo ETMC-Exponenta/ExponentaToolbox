@@ -4,7 +4,7 @@ classdef ExponentaEditor < handle
     
     properties
         Root
-        FileName = 'notifications.json'
+        FileName = 'data/notifications.json'
         Data
     end
     
@@ -19,11 +19,7 @@ classdef ExponentaEditor < handle
             %% Read data
             data = obj.json_read(fullfile(obj.Root, obj.FileName), true);
             data.duedate = datetime(data.duedate);
-            actions = data.actions;
-            isca = cellfun(@(x) ~isempty(x) && iscell(x{1}), actions);
-            if any(isca)
-                data.actions(isca) = cellfun(@(x)vertcat(x{:}), actions(isca), 'UniformOutput', false);
-            end
+            data = ExponentaNotifier.fixActions(data);
             obj.Data = data;
         end
         

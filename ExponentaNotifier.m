@@ -94,19 +94,6 @@ classdef ExponentaNotifier < handle
            setpref(obj.Name, obj.Key, obj.Data);
         end
         
-        function data = fixActions(~, data)
-            %% Fix actions cell array
-            actions = data.actions;
-            if size(actions, 2) > 1
-                actions = mat2cell(actions, ones(1, size(actions, 1)), 2);
-                data.actions = actions;
-            end
-            isca = cellfun(@(x) ~isempty(x) && iscell(x) && iscell(x{1}), actions);
-            if any(isca)
-                data.actions(isca) = cellfun(@(x)vertcat(x{:}), actions(isca), 'UniformOutput', false);
-            end
-        end
-        
         function markChecked(obj, code, mark)
             %% Mark notification as checked
             if ~isempty(obj.Data)
@@ -144,6 +131,27 @@ classdef ExponentaNotifier < handle
                 end
                 favs.updateCommand(c0, c1);
             end
+        end
+        
+    end
+    
+    methods (Static)
+        
+        function data = fixActions(data)
+            %% Fix actions cell array
+            actions = data.actions;
+            if size(actions, 2) > 1
+                actions = mat2cell(actions, ones(1, size(actions, 1)), 2);
+            end
+            isca = cellfun(@(x) ~isempty(x) && iscell(x) && iscell(x{1}), actions);
+            if any(isca)
+                actions(isca) = cellfun(@(x)vertcat(x{:}), actions(isca), 'UniformOutput', false);
+            end
+            iscv = cellfun(@(x) ~isempty(x) && iscell(x) && size(x, 2) == 1, actions);
+            if any(iscv)
+                actions(iscv) = cellfun(@(x)reshape(x, 2, [])', actions(iscv), 'UniformOutput', false);
+            end
+            data.actions = actions;
         end
         
     end

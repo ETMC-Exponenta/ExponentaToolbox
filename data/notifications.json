@@ -7,12 +7,12 @@
 		"checked": false,
 		"actions": [
 			[
-				"Actions1",
-				"@(~,~)web(\"https:\/\/exponenta.ru\""
+				"Подробности и регистрация",
+				"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\""
 			],
 			[
 				"Actions",
-				"@(~,~)web(\"https:\/\/exponenta.ru\""
+				"@(~,~)web(\"https:\/\/exponenta.ru\")"
 			]
 		]
 	},
