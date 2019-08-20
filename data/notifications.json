@@ -1,5 +1,13 @@
 [
 	{
+		"code": "190820143301",
+		"message": "Не забывайте обновлять Exponenta Toolbox",
+		"theme": "warning",
+		"duedate": "27-Sep-2019",
+		"checked": false,
+		"actions": []
+	},
+	{
 		"code": "190816172335",
 		"message": "11 сентября начинается тренинг\n\"MATLAB для профессионалов\"",
 		"theme": "info",
