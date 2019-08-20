@@ -10,6 +10,7 @@ classdef ExponentaNotifier < handle
         DataRecievedFcn
         Offline = false
         DownloadTimeout = 3
+        Storage
         DataPath = 'data/notifications.json'
         Key = 'Notifications'
         NotifierName = 'Exponenta App'
@@ -21,6 +22,7 @@ classdef ExponentaNotifier < handle
         function obj = ExponentaNotifier(cbfun)
             %% Constructor
             obj.Updater = ExponentaUpdater();
+            obj.Storage = ExponentaStorage('ext', obj.Updater.ext, 'type', 'pref');
             obj.Name = obj.Updater.ext.name;
             obj.Offline = ~obj.Updater.isonline();
             obj.Data = obj.readNotifications();
@@ -112,16 +114,12 @@ classdef ExponentaNotifier < handle
         
         function N = readNotifications(obj)
             %% Read saved notifications
-            if ispref(obj.Name, obj.Key)
-                N = getpref(obj.Name, obj.Key);
-            else
-                N = [];
-            end
+            N = obj.Storage.get(obj.Key);
         end
         
         function saveNotifications(obj)
             %% Save notifications
-           setpref(obj.Name, obj.Key, obj.Data);
+           obj.Storage.set(obj.Key, obj.Data);
         end
         
         function markChecked(obj, code, mark)
