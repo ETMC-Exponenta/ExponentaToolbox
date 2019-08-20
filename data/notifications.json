@@ -8,7 +8,7 @@
 		"actions": [
 			[
 				"Подробности и регистрация",
-				"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\""
+				"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\")"
 			],
 			[
 				"Actions",
@@ -24,7 +24,7 @@
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-i-verifikaciya-sistem-na-plis\""
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-i-verifikaciya-sistem-na-plis\")"
 		]
 	},
 	{
@@ -35,7 +35,7 @@
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-algoritmov-predictice-maintenance\""
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-algoritmov-predictice-maintenance\")"
 		]
 	},
 	{
@@ -46,7 +46,7 @@
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlmr_2019_09\""
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlmr_2019_09\")"
 		]
 	}
 ]

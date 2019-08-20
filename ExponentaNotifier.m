@@ -30,12 +30,18 @@ classdef ExponentaNotifier < handle
             Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
         end
         
-        function n = showNotification(obj, parent, data, checkfcn)
+        function n = showNotification(~, parent, data, checkfcn)
             %% Show notification
+            actions = data.actions{1};
+            if ~isempty(actions)
+                for i = 1 : size(actions, 1)
+                    actions{i, 2} = str2func(actions{i, 2});
+                end
+            end
             n = uisnackbar(parent, data.message{1}, 'Type', 'checkable',...
                 'Checked', data.checked(1), 'Animation', 'none', 'Theme', data.theme{1},...
                 'Time', inf, 'MinWidth', 350, 'UserData', data.code{1},...
-                'MainActionFcn', checkfcn, 'Actions', data.actions{1});
+                'MainActionFcn', checkfcn, 'Actions', actions);
         end
         
         function downloadNotifications(obj)
