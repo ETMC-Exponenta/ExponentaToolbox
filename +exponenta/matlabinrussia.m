@@ -1,4 +1,3 @@
 function matlabinrussia()
-%HUB Summary of this function goes here
-%   Detailed explanation goes here
+%% Open MATLABInRussia Youtube channel
 web('https://youtube.com/matlabinrussia', '-browser')

@@ -6,6 +6,7 @@ classdef ExponentaNotifier < handle
         Name
         Updater
         Data
+        UISnackbars
         DataRecievedFcn
         Offline = false
         DownloadTimeout = 3
@@ -28,6 +29,23 @@ classdef ExponentaNotifier < handle
             end
             obj.updateNotifications();
             Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
+        end
+        
+        function showNotifications(obj, parent, checkfcn)
+            %% Show notifications in app
+            data = obj.Data;
+            if ~isempty(data)
+                notifications = cell(height(data), 1);
+                for i = 1 : height(data)
+                    notifications{i} = obj.showNotification(parent, data(i, :), checkfcn);
+                end
+                delete(obj.UISnackbars);
+                obj.UISnackbars = flipud(vertcat(notifications{:}));
+                pos = get(vertcat(obj.UISnackbars.Root), 'Position');
+                pos = uialign(vertcat(pos{:}), parent, 'center', 'top', true, [0 -15], 'VertDist', 5);
+                set(obj.UISnackbars, {'Position'}, num2cell(pos, 2));
+                arrayfun(@(s)s.redraw(), obj.UISnackbars);
+            end
         end
         
         function n = showNotification(~, parent, data, checkfcn)
