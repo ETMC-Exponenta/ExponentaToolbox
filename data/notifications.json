@@ -6,8 +6,14 @@
 		"duedate": "10-Sep-2019",
 		"checked": false,
 		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\""
+			[
+				"Actions1",
+				"@(~,~)web(\"https:\/\/exponenta.ru\""
+			],
+			[
+				"Actions",
+				"@(~,~)web(\"https:\/\/exponenta.ru\""
+			]
 		]
 	},
 	{
