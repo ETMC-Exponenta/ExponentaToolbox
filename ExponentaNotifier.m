@@ -3,19 +3,18 @@ classdef ExponentaNotifier < handle
     %   Detailed explanation goes here
     
     properties
-        Name
-        Updater
         Data
+        Updater % ExponentaUpdater
+        Storage % ExponentaStorage
         UISnackbars
         DataRecievedFcn
         Offline = false
         DownloadTimeout = 3
-        Storage
         DataPath = 'data/notifications.json'
         Key = 'Notifications'
         NotifierName = 'Exponenta App'
-        IconDefault = 'icon-my-etmc-exponenta.png'
-        IconNotify = 'icon-my-etmc-exponenta-mod-notification.png'
+        NotifierIconDefault = 'icon-my-etmc-exponenta.png'
+        NotifierIcon = 'icon-my-etmc-exponenta-mod-notification.png'
     end
     
     methods
@@ -23,14 +22,13 @@ classdef ExponentaNotifier < handle
             %% Constructor
             obj.Updater = ExponentaUpdater();
             obj.Storage = ExponentaStorage('ext', obj.Updater.ext, 'type', 'pref');
-            obj.Name = obj.Updater.ext.name;
             obj.Offline = ~obj.Updater.isonline();
             obj.Data = obj.readNotifications();
             if nargin > 0
                 obj.DataRecievedFcn = cbfun;
             end
             obj.updateNotifications();
-            exponenta.internal.Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
+            obj.Updater.run_task(@(~,~)obj.downloadNotifications, obj.DownloadTimeout);
         end
         
         function showNotifications(obj, parent, checkfcn)
@@ -149,13 +147,14 @@ classdef ExponentaNotifier < handle
         function setIcon(obj)
             %% Set shortcut icon
             if obj.Updater.ext.isfav(obj.NotifierName)
+                name = obj.Updater.ext.name;
                 favs = com.mathworks.mlwidgets.favoritecommands.FavoriteCommands.getInstance();
-                c0 = favs.getCommandProperties(obj.NotifierName, obj.Name);
-                c1 = favs.getCommandProperties(obj.NotifierName, obj.Name);
+                c0 = favs.getCommandProperties(obj.NotifierName, name);
+                c1 = favs.getCommandProperties(obj.NotifierName, name);
                 if isempty(obj.Data) || all(obj.Data.checked)
-                    c1.setIconName(obj.IconDefault);
+                    c1.setIconName(obj.NotifierIconDefault);
                 else
-                    c1.setIconName(obj.IconNotify);
+                    c1.setIconName(obj.NotifierIcon);
                 end
                 favs.updateCommand(c0, c1);
             end

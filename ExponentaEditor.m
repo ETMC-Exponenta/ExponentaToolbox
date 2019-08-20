@@ -12,6 +12,7 @@ classdef ExponentaEditor < handle
     methods
         function obj = ExponentaEditor()
             %% Constructor
+            obj.check_jsonlab();
             obj.Root = fileparts(mfilename('fullpath'));
             obj.Notifier = ExponentaNotifier();
             obj.load();
@@ -66,7 +67,7 @@ classdef ExponentaEditor < handle
         end
         
         function check_jsonlab(~)
-            %% Check jsonlab in installed
+            %% Check jsonlab is installed
             w1 = which('loadjson');
             w2 = which('savejson');
             if isempty(w1) || isempty(w2)
