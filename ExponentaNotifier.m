@@ -28,7 +28,7 @@ classdef ExponentaNotifier < handle
                 obj.DataRecievedFcn = cbfun;
             end
             obj.updateNotifications();
-            Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
+            exponenta.internal.Async(@(~)obj.downloadNotifications, obj.DownloadTimeout);
         end
         
         function showNotifications(obj, parent, checkfcn)
