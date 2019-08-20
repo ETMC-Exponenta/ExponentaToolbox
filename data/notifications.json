@@ -1,37 +1,46 @@
 [
 	{
 		"code": "190816172335",
-		"message": "fdsfds\ngggg",
-		"theme": "dark",
-		"duedate": "30-Aug-2019",
-		"checked": false
+		"message": "11 сентября начинается тренинг \"MATLAB для профессионалов\"",
+		"theme": "info",
+		"duedate": "10-Sep-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\""
+		]
 	},
 	{
 		"code": "190816172336",
-		"message": "рпрвпавпавпавпвав",
-		"theme": "light",
-		"duedate": "30-Aug-2019",
-		"checked": false
+		"message": "17 сентября Марат Усс проведет семинар \"Разработка и верификация систем на ПЛИС\"",
+		"theme": "info",
+		"duedate": "16-Sep-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-i-verifikaciya-sistem-na-plis\""
+		]
 	},
 	{
 		"code": "190816172337",
-		"message": "fdsfds\ngggg",
-		"theme": "dark",
-		"duedate": "30-Aug-2019",
-		"checked": false
+		"message": "19 сентября Павел Рословец проведет вебинар \"Разработка алгоритмов Predictive Maintenance\"",
+		"theme": "info",
+		"duedate": "18-Sep-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-algoritmov-predictice-maintenance\""
+		]
 	},
 	{
-		"code": "190816172338",
-		"message": "fdsfdshhjfgf161",
-		"theme": "warning",
-		"duedate": "30-Aug-2019",
-		"checked": false
-	},
-	{
-		"code": "190816172339",
-		"message": "fdsfds\ngggg",
-		"theme": "dark",
-		"duedate": "30-Aug-2019",
-		"checked": false
+		"code": "190820081932",
+		"message": "20 сентября Артем Багров проведет семинар \"Управление рыночным рисками в MATLAB\"",
+		"theme": "info",
+		"duedate": "19-Sep-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlmr_2019_09\""
+		]
 	}
 ]

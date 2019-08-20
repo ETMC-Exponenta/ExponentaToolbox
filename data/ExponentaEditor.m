@@ -12,17 +12,22 @@ classdef ExponentaEditor < handle
         function obj = ExponentaEditor()
             %% Constructor
             obj.Root = fileparts(mfilename('fullpath'));
-            obj.read();
+            obj.load();
         end
         
-        function data = read(obj)
+        function data = load(obj)
             %% Read data
             data = obj.json_read(fullfile(obj.Root, obj.FileName), true);
             data.duedate = datetime(data.duedate);
+            actions = data.actions;
+            isca = cellfun(@(x) ~isempty(x) && iscell(x{1}), actions);
+            if any(isca)
+                data.actions(isca) = cellfun(@(x)vertcat(x{:}), actions(isca), 'UniformOutput', false);
+            end
             obj.Data = data;
         end
         
-        function write(obj)
+        function save(obj)
             %% Write data
             obj.json_write(fullfile(obj.Root, obj.FileName), obj.Data, true);
         end
@@ -37,9 +42,9 @@ classdef ExponentaEditor < handle
             if nargin < 3
                 asTable = true;
             end
-            data = loadjson(fname, 'Encoding', 'UTF-8');
+            data = loadjson(fname, 'SimplifyCell', 1, 'ParseLogical', 1, 'Encoding', 'UTF-8');
             if asTable && ~(isstruct(data) && isscalar(data))
-                data = struct2table(vertcat(data{:}), 'AsArray', true);
+                data = struct2table(data, 'AsArray', true);
             end
         end
         
