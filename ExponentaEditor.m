@@ -6,7 +6,6 @@ classdef ExponentaEditor < handle
         Root
         FileName = 'data/notifications.json'
         Data
-        Notifier % ExponentaNotifier
     end
     
     methods
@@ -14,7 +13,6 @@ classdef ExponentaEditor < handle
             %% Constructor
             obj.check_jsonlab();
             obj.Root = fileparts(mfilename('fullpath'));
-            obj.Notifier = ExponentaNotifier();
             obj.load();
         end
         
@@ -22,7 +20,7 @@ classdef ExponentaEditor < handle
             %% Read data
             data = obj.json_read(fullfile(obj.Root, obj.FileName), true);
             data.duedate = datetime(data.duedate);
-            data = obj.Notifier.fixActions(data);
+            data = ExponentaNotifier.fixActions(data);
             obj.Data = data;
         end
         
@@ -36,9 +34,9 @@ classdef ExponentaEditor < handle
             code = datestr(datetime, 'yymmddHHMMss');
         end
         
-        function n = showNotification(obj, parent, data)
+        function n = showNotification(~, parent, data)
             %% Sow notification
-            n = obj.Notifier.showNotification(parent, data, []);
+            n = ExponentaNotifier.showNotification(parent, data, []);
         end
         
         function data = json_read(~, fname, asTable)
