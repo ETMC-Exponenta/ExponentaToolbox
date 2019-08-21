@@ -21,7 +21,8 @@ classdef ExponentaNotifier < handle
         function obj = ExponentaNotifier(cbfun)
             %% Constructor
             obj.Updater = ExponentaUpdater();
-            obj.Storage = ExponentaStorage('ext', obj.Updater.ext, 'type', 'pref');
+            obj.Storage = ExponentaStorage('ext', obj.Updater.ext,...
+                'type', 'pref', 'auto', true);
             obj.Offline = ~obj.Updater.isonline();
             obj.Data = obj.readNotifications();
             if nargin > 0
@@ -86,8 +87,8 @@ classdef ExponentaNotifier < handle
         
         function updateNotifications(obj)
             %% Update notifications to actual date
-            N = obj.fixActions(obj.Data);
-            if ~isempty(N)
+            if ~isempty(obj.Data)
+                N = obj.fixActions(obj.Data);
                 obj.Data = N(N.duedate >= datetime('today'), :);
                 obj.saveNotifications();
             end
