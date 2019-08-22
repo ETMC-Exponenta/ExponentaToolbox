@@ -7,7 +7,7 @@
     <param.summary>Быстрый доступ к русскоязычным материалам по MATLAB и ресурсам ЦИТМ "Экспонента"</param.summary>
     <param.description />
     <param.screenshot>${PROJECT_ROOT}\exponenta-cover.png</param.screenshot>
-    <param.version>0.3</param.version>
+    <param.version>0.4</param.version>
     <param.output>${PROJECT_ROOT}\Exponenta.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -41,8 +41,8 @@ ExponentaDev.m</param.exclude.filters>
     </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
-    <param.release.start />
-    <param.release.end />
+    <param.release.start>R2018b</param.release.start>
+    <param.release.end>latest</param.release.end>
     <param.release.current.only>false</param.release.current.only>
     <param.compatiblity.windows>true</param.compatiblity.windows>
     <param.compatiblity.macos>true</param.compatiblity.macos>
@@ -73,8 +73,6 @@ ExponentaDev.m</param.exclude.filters>
       <param.exported.on.package />
       <param.matlab.project.id />
       <param.matlab.project.name />
-      <param.release.start />
-      <param.release.end />
       <param.release.current.only />
       <param.compatiblity.windows />
       <param.compatiblity.macos />
@@ -92,18 +90,12 @@ ExponentaDev.m</param.exclude.filters>
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\+exponenta</file>
-      <file>${PROJECT_ROOT}\.git</file>
-      <file>${PROJECT_ROOT}\.gitignore</file>
       <file>${PROJECT_ROOT}\data</file>
       <file>${PROJECT_ROOT}\DesktopToolset.xml</file>
-      <file>${PROJECT_ROOT}\dev_on.m</file>
       <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\exponenta-cover.png</file>
       <file>${PROJECT_ROOT}\exponenta.m</file>
-      <file>${PROJECT_ROOT}\Exponenta.mltbx</file>
-      <file>${PROJECT_ROOT}\Exponenta.prj</file>
       <file>${PROJECT_ROOT}\ExponentaApp.mlapp</file>
-      <file>${PROJECT_ROOT}\ExponentaDev.m</file>
       <file>${PROJECT_ROOT}\ExponentaEditorApp.mlapp</file>
       <file>${PROJECT_ROOT}\ExponentaExtender.m</file>
       <file>${PROJECT_ROOT}\ExponentaNotifier.m</file>
@@ -128,8 +120,6 @@ ExponentaDev.m</param.exclude.filters>
       <file>${PROJECT_ROOT}\icon-my-etmc-exponenta-mod-notification.png</file>
       <file>${PROJECT_ROOT}\icon-my-etmc-exponenta.png</file>
       <file>${PROJECT_ROOT}\info.xml</file>
-      <file>${PROJECT_ROOT}\install.m</file>
-      <file>${PROJECT_ROOT}\installweb.m</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\resources</file>
       <file>${PROJECT_ROOT}\rusdoc.m</file>
