@@ -12,13 +12,11 @@ disp('Installing...')
 v = version;
 if instOld
     matlab.addons.install(instRes.assets.name);
-else
-    open(instRes.assets.name);
-end
-if instOld
     ext = ExponentaExtender;
     ext.doc;
     clear ext
+else
+    open(instRes.assets.name);
 end
 clear instURL instRes instName instOld
 disp('Installation complete!')
