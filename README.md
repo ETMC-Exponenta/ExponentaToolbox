@@ -17,7 +17,7 @@ eval(webread('https://exponenta.ru/install/toolbox'))
 
 1. App Designer Pro Library: [AppDesignerPro.mltbx](https://roslovets.github.io/ghbin/#roslovets/AppDesignerPro#AppDesignerPro.mltbx)
 
-2. Exponenta Toolbox: [Exponenta.mltbx])(https://roslovets.github.io/ghbin/#etmc-exponenta/ExponentaToolbox#Exponenta.mltbx)
+2. Exponenta Toolbox: [Exponenta.mltbx](https://roslovets.github.io/ghbin/#etmc-exponenta/ExponentaToolbox#Exponenta.mltbx)
 
 ### Сборка (только для разработчиков)
 
