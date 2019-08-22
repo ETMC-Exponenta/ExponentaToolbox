@@ -107,7 +107,6 @@ ExponentaDev.m</param.exclude.filters>
       <file>${PROJECT_ROOT}\ExponentaEditorApp.mlapp</file>
       <file>${PROJECT_ROOT}\ExponentaExtender.m</file>
       <file>${PROJECT_ROOT}\ExponentaNotifier.m</file>
-      <file>${PROJECT_ROOT}\ExponentaStorage.asv</file>
       <file>${PROJECT_ROOT}\ExponentaStorage.m</file>
       <file>${PROJECT_ROOT}\ExponentaUpdater.m</file>
       <file>${PROJECT_ROOT}\hub.m</file>
