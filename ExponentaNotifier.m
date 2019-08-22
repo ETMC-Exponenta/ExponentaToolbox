@@ -59,7 +59,7 @@ classdef ExponentaNotifier < handle
             %% Get notifications data
             furl = obj.Updater.ext.getrawurl(obj.DataPath);
             data = [];
-            if ~obj.Offline
+            if ~obj.Offline && obj.Updater.isonline()
                 try
                     txt = webread(furl);
                     data = struct2table(jsondecode(txt), 'AsArray', true);
@@ -138,14 +138,16 @@ classdef ExponentaNotifier < handle
             if obj.Updater.ext.isfav(obj.NotifierName)
                 name = obj.Updater.ext.name;
                 favs = com.mathworks.mlwidgets.favoritecommands.FavoriteCommands.getInstance();
-                c0 = favs.getCommandProperties(obj.NotifierName, name);
-                c1 = favs.getCommandProperties(obj.NotifierName, name);
-                if isempty(obj.Data) || all(obj.Data.checked)
-                    c1.setIconName(obj.NotifierIconDefault);
-                else
-                    c1.setIconName(obj.NotifierIcon);
+                if ismethod(favs, 'getCommandProperties')
+                    c0 = favs.getCommandProperties(obj.NotifierName, name);
+                    c1 = favs.getCommandProperties(obj.NotifierName, name);
+                    if isempty(obj.Data) || all(obj.Data.checked)
+                        c1.setIconName(obj.NotifierIconDefault);
+                    else
+                        c1.setIconName(obj.NotifierIcon);
+                    end
+                    favs.updateCommand(c0, c1);
                 end
-                favs.updateCommand(c0, c1);
             end
         end
         
