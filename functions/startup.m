@@ -6,6 +6,6 @@ try
         exponenta.internal.checkupdate(s.ext);
     end
     if s.get('AutoLoadNotifications', [], true)
-        ExponentaNotifier([], true, s.ext);
+        exponenta.internal.Notifier([], true, s.ext);
     end
 end

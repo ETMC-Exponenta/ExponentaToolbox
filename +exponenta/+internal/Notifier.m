@@ -1,4 +1,4 @@
-classdef ExponentaNotifier < handle
+classdef Notifier < handle
     %EXPONENTANOTIFIER Summary of this class goes here
     %   Detailed explanation goes here
     
@@ -18,7 +18,7 @@ classdef ExponentaNotifier < handle
     end
     
     methods
-        function obj = ExponentaNotifier(cbfun, synch, ext)
+        function obj = Notifier(cbfun, synch, ext)
             %% Constructor
             obj.Updater = ExponentaUpdater(ext);
             obj.Storage = ExponentaStorage('ext', ext,...
