@@ -25,3 +25,7 @@ eval(webread('https://exponenta.ru/install/toolbox'))
 ```MATLAB
 install
 ```
+
+## Документация
+
+[Открыть документацию](https://github.com/ETMC-Exponenta/ExponentaToolbox/blob/master/doc/GettingStarted.pdf)
