@@ -34,7 +34,11 @@ ExponentaDev.m</param.exclude.filters>
     <param.matlabpath.excludes />
     <param.javaclasspath.excludes />
     <param.exported.on.package>false</param.exported.on.package>
-    <param.required.addons />
+    <param.required.addons>
+      <requiredaddons>
+        <requiredAddOn downloadURL="https://github.com/roslovets/AppDesignerPro/raw/master/AppDesignerPro.mltbx" earliest="earliest" fromRepository="false" id="bb034114-16ea-40b4-a823-230b96b98792" include="true" latest="latest">App Designer Pro</requiredAddOn>
+      </requiredaddons>
+    </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
     <param.release.start />
@@ -67,7 +71,6 @@ ExponentaDev.m</param.exclude.filters>
       <param.matlabpath.excludes />
       <param.javaclasspath.excludes />
       <param.exported.on.package />
-      <param.required.addons />
       <param.matlab.project.id />
       <param.matlab.project.name />
       <param.release.start />
@@ -101,10 +104,10 @@ ExponentaDev.m</param.exclude.filters>
       <file>${PROJECT_ROOT}\Exponenta.prj</file>
       <file>${PROJECT_ROOT}\ExponentaApp.mlapp</file>
       <file>${PROJECT_ROOT}\ExponentaDev.m</file>
-      <file>${PROJECT_ROOT}\ExponentaEditor.m</file>
       <file>${PROJECT_ROOT}\ExponentaEditorApp.mlapp</file>
       <file>${PROJECT_ROOT}\ExponentaExtender.m</file>
       <file>${PROJECT_ROOT}\ExponentaNotifier.m</file>
+      <file>${PROJECT_ROOT}\ExponentaStorage.asv</file>
       <file>${PROJECT_ROOT}\ExponentaStorage.m</file>
       <file>${PROJECT_ROOT}\ExponentaUpdater.m</file>
       <file>${PROJECT_ROOT}\hub.m</file>
@@ -135,7 +138,20 @@ ExponentaDev.m</param.exclude.filters>
       <file>${PROJECT_ROOT}\ToolboxConfig.xml</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
-    <fileset.depfun.excluded />
+    <fileset.depfun.excluded>
+      <file>D:\MATLAB\jsonlab\base64decode.m</file>
+      <file>D:\MATLAB\jsonlab\base64encode.m</file>
+      <file>D:\MATLAB\jsonlab\fast_match_bracket.m</file>
+      <file>D:\MATLAB\jsonlab\isoctavemesh.m</file>
+      <file>D:\MATLAB\jsonlab\jdatadecode.m</file>
+      <file>D:\MATLAB\jsonlab\jsonopt.m</file>
+      <file>D:\MATLAB\jsonlab\loadjson.m</file>
+      <file>D:\MATLAB\jsonlab\match_bracket.m</file>
+      <file>D:\MATLAB\jsonlab\mergestruct.m</file>
+      <file>D:\MATLAB\jsonlab\nestbracket2dim.m</file>
+      <file>D:\MATLAB\jsonlab\savejson.m</file>
+      <file>D:\MATLAB\jsonlab\varargin2struct.m</file>
+    </fileset.depfun.excluded>
     <fileset.package />
     <build-deliverables>
       <file location="${PROJECT_ROOT}" name="Exponenta.mltbx" optional="false">D:\MATLAB\ExponentaToolbox\Exponenta.mltbx</file>

@@ -18,18 +18,20 @@ classdef ExponentaNotifier < handle
     end
     
     methods
-        function obj = ExponentaNotifier(cbfun)
+        function obj = ExponentaNotifier(cbfun, synch, ext)
             %% Constructor
-            obj.Updater = ExponentaUpdater();
-            obj.Storage = ExponentaStorage('ext', obj.Updater.ext,...
+            obj.Updater = ExponentaUpdater(ext);
+            obj.Storage = ExponentaStorage('ext', ext,...
                 'type', 'pref', 'auto', true);
             obj.Offline = ~obj.Updater.isonline();
             obj.Data = obj.readNotifications();
-            if nargin > 0
+            if nargin > 0 && ~isempty(cbfun)
                 obj.DataRecievedFcn = cbfun;
             end
             obj.updateNotifications();
-            obj.Updater.run_task(@(~,~)obj.downloadNotifications, obj.DownloadTimeout);
+            if nargin > 1 && synch
+                obj.Updater.run_task(@(~,~)obj.downloadNotifications, obj.DownloadTimeout);
+            end
         end
         
         function showNotifications(obj, parent, checkfcn)
