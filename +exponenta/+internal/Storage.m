@@ -1,4 +1,4 @@
-classdef ExponentaStorage < handle
+classdef Storage < handle
     % Helps you easily store any data within installed toolbox, i.e. user settings
     % By Pavel Roslovets, ETMC Exponenta
     % https://github.com/ETMC-Exponenta/ToolboxExtender
@@ -16,7 +16,7 @@ classdef ExponentaStorage < handle
     end
     
     methods
-        function obj = ExponentaStorage(varargin)
+        function obj = Storage(varargin)
             %% Constructor
             p = inputParser();
             p.addParameter('type', 'mat');

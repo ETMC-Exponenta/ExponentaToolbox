@@ -5,6 +5,5 @@ dev_on;
 dev.test('', false);
 % Post-install commands
 cd('..');
-ext = ExponentaExtender;
-ext.doc;
+exponenta.doc;
 % Add your post-install commands below

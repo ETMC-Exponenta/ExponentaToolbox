@@ -155,7 +155,7 @@ classdef ExponentaDev < handle
         
         function check(obj)
             % Check deployed release
-            upd = ExponentaUpdater(obj.ext);
+            upd = exponenta.internal.Updater(obj.ext);
             upd.fetch();
             disp("Latest release: v" + upd.vr);
             if isempty(upd.rel)

@@ -1,7 +1,7 @@
 function startup()
 %% Check notifications when MATLAB starts
 try
-    s = ExponentaStorage('type', 'pref', 'auto', 1);
+    s = exponenta.internal.Storage('type', 'pref', 'auto', 1);
     if s.get('AutoCheckUpdate', [], true)
         exponenta.internal.checkupdate(s.ext);
     end
