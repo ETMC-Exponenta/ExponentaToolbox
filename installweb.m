@@ -9,7 +9,4 @@ open(instRes.assets.name);
 clear instURL instRes instName
 disp('Installation complete!')
 % Post-install commands
-ext = ExponentaExtender;
-ext.doc;
-clear ext
 % Add your post-install commands below
