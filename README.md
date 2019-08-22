@@ -1,4 +1,4 @@
-# ExponentaToolbox
+# Exponenta Toolbox
 
 Быстрый доступ к русскоязычным материалам по MATLAB и ресурсам ЦИТМ "Экспонента"
 
