@@ -15,6 +15,11 @@ if instOld
 else
     open(instRes.assets.name);
 end
+if instOld
+    ext = ExponentaExtender;
+    ext.doc;
+    clear ext
+end
 clear instURL instRes instName instOld
 disp('Installation complete!')
 % Post-install commands
