@@ -19,7 +19,7 @@ eval(webread('https://exponenta.ru/install/toolbox'))
 
 2. Exponenta Toolbox: [Exponenta.mltbx](https://roslovets.github.io/ghbin/#etmc-exponenta/ExponentaToolbox#Exponenta.mltbx)
 
-### Сборка (только для разработчиков)
+### Сборка (только для разработчиков, R2019a)
 
 Скачайте и распакуйте [файлы проекта](https://github.com/roslovets/AppDesignerPro/archive/master.zip), затем запустите скрипт установки:
 ```MATLAB
