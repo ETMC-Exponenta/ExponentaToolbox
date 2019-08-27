@@ -21,7 +21,7 @@ eval(webread('https://exponenta.ru/install/toolbox'))
 
 ### Сборка (только для разработчиков, R2019a)
 
-Скачайте и распакуйте [файлы проекта](https://github.com/roslovets/AppDesignerPro/archive/master.zip), затем запустите скрипт установки:
+Скачайте и распакуйте [файлы проекта](https://github.com/ETMC-Exponenta/ExponentaToolbox/archive/master.zip), затем запустите скрипт установки:
 ```MATLAB
 install
 ```
