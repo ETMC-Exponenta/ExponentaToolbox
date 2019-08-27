@@ -20,7 +20,7 @@ classdef Notifier < handle
     methods
         function obj = Notifier(cbfun, synch, ext)
             %% Constructor
-            obj.Updater = exponenta.internal.Updater(ext);
+            obj.Updater = ExponentaUpdater(ext);
             obj.Storage = exponenta.internal.Storage('ext', ext,...
                 'type', 'pref', 'auto', true);
             obj.Offline = ~obj.Updater.isonline();

@@ -1,4 +1,4 @@
-classdef Updater < handle
+classdef ExponentaUpdater < handle
     % Control version of installed toolbox and update it from GitHub
     % By Pavel Roslovets, ETMC Exponenta
     % https://github.com/ETMC-Exponenta/ToolboxExtender
@@ -17,7 +17,7 @@ classdef Updater < handle
     end
     
     methods
-        function obj = Updater(extender)
+        function obj = ExponentaUpdater(extender)
             % Init
             if nargin < 1
                 obj.ext = ExponentaExtender;
