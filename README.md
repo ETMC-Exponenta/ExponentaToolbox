@@ -2,6 +2,8 @@
 
 Быстрый доступ к русскоязычным материалам по MATLAB и ресурсам ЦИТМ "Экспонента"
 
+[Обсуждение и отзывы](https://hub.exponenta.ru/post/exponenta-toolbox-bystryy-dostup-k-russkoyazychnym-materialam562)
+
 ![Epxonenta Toolbox screenshot](https://github.com/ETMC-Exponenta/ExponentaToolbox/raw/master/imgs/screenshot1.png)
 
 ## Установка
