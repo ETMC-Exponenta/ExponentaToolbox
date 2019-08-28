@@ -1,6 +1,7 @@
 # Exponenta Toolbox
 
 Быстрый доступ к русскоязычным материалам по MATLAB и ресурсам ЦИТМ "Экспонента"
+
 ![Epxonenta Toolbox screenshot](https://github.com/ETMC-Exponenta/ExponentaToolbox/raw/master/imgs/screenshot1.png)
 
 ## Установка
