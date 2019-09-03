@@ -12,7 +12,7 @@ disp('Installing...')
 v = version;
 if instOld
     matlab.addons.install(instRes.assets.name);
-    ext = exponenta.doc;
+    exponenta.doc;
 else
     open(instRes.assets.name);
 end
