@@ -42,4 +42,4 @@ install
 
 ## Документация
 
-[Открыть документацию](https://github.com/ETMC-Exponenta/ExponentaToolbox/blob/master/doc/GettingStarted.pdf)
+[Предпросмотр документации](https://github.com/ETMC-Exponenta/ExponentaToolbox/blob/master/doc/GettingStarted.pdf)
