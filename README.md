@@ -4,7 +4,7 @@
 
 [Обзор и обсуждение](https://hub.exponenta.ru/post/exponenta-toolbox-bystryy-dostup-k-russkoyazychnym-materialam562)
 
-[Проект на MathWorks File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/72700)
+[Проект на MathWorks File Exchange](https://www.mathworks.com/matlabcentral/fileexchange/72703)
 
 ![Epxonenta Toolbox screenshot](https://github.com/ETMC-Exponenta/ExponentaToolbox/raw/master/imgs/promo.png)
 
