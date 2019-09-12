@@ -1,24 +1,19 @@
 [
 	{
-		"code": "190821152305",
-		"message": "29 августа смотрите на нашем Youtube-канале\nпрямой эфир о запуске сообщества\nи русской документации",
-		"theme": "warning",
-		"duedate": "28-Aug-2019",
+		"code": "190912121523",
+		"message": "Вышел MATLAB R2019b!",
+		"theme": "success",
+		"duedate": "11-Oct-2019",
 		"checked": false,
 		"actions": [
-			"Перейти на канал",
-			"@(~,~)web(\"https:\/\/youtube.com\/matlabinrussia\")"
-		]
-	},
-	{
-		"code": "190816172335",
-		"message": "11 сентября начинается тренинг\n\"MATLAB для профессионалов\"",
-		"theme": "info",
-		"duedate": "10-Sep-2019",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlbe_2019_09\")"
+			[
+				"Что нового?",
+				"@(~,~)web(\"https:\/\/www.mathworks.com\/videos\/release-2019b-highlights-1567193571722.html\")"
+			],
+			[
+				"Скачать",
+				"@(~,~)web(\"https:\/\/www.mathworks.com\/downloads\/\")"
+			]
 		]
 	},
 	{
