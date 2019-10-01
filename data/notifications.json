@@ -3,7 +3,7 @@
 		"code": "190912121523",
 		"message": "Вышел MATLAB R2019b!",
 		"theme": "success",
-		"duedate": "11-Oct-2019",
+		"duedate": "25-Oct-2019",
 		"checked": false,
 		"actions": [
 			[
@@ -17,47 +17,58 @@
 		]
 	},
 	{
-		"code": "190816172336",
-		"message": "17 сентября Марат Усс проведет семинар\n\"Разработка и верификация систем на ПЛИС\"",
-		"theme": "info",
-		"duedate": "16-Sep-2019",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-i-verifikaciya-sistem-na-plis\")"
-		]
-	},
-	{
-		"code": "190816172337",
-		"message": "19 сентября Павел Рословец проведет вебинар\n\"Разработка алгоритмов Predictive Maintenance\"",
-		"theme": "info",
-		"duedate": "18-Sep-2019",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-algoritmov-predictice-maintenance\")"
-		]
-	},
-	{
 		"code": "190820081932",
-		"message": "20 сентября Артем Багров проведет семинар\n\"Управление рыночным рисками в MATLAB\"",
+		"message": "8 октября семинар по глубокому обучению\nпройдет в Санкт-Петербурге",
 		"theme": "info",
-		"duedate": "19-Sep-2019",
+		"duedate": "08-Oct-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/mlmr_2019_09\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/glubokie-nejronnye-seti-reshenie-prakticheskih-zadach-spb\")"
 		]
 	},
 	{
-		"code": "190820094711",
-		"message": "24 сентября пройдет семинар\n\"Разработка авиационных систем управления\"",
+		"code": "191001100209",
+		"message": "10 октября семинар по глубокому обучению\nпройдет в Москве",
 		"theme": "info",
-		"duedate": "23-Sep-2019",
+		"duedate": "10-Oct-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-aviacionnyh-sistem-upravleniya\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/kompyuternoe-zrenie-i-glubokoe-obuchenie-v-matlab\")"
+		]
+	},
+	{
+		"code": "191001100353",
+		"message": "15 октября Павел Рословец проведет вебинар\n\"Проектирование роботов-манипуляторов\"",
+		"theme": "info",
+		"duedate": "15-Oct-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/proektirovanie-robotov-manipulyatorov\")"
+		]
+	},
+	{
+		"code": "191001100541",
+		"message": "29 октября Марат Усс и Андрей Кисельников\nпроведут семинар \"Разработка систем связи\"",
+		"theme": "info",
+		"duedate": "29-Oct-2019",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-sistem-svyazi\")"
+		]
+	},
+	{
+		"code": "191001100752",
+		"message": "Больше мероприятий на сайте Экспоненты",
+		"theme": "success",
+		"duedate": "31-Dec-2019",
+		"checked": false,
+		"actions": [
+			"Смотреть",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\")"
 		]
 	}
 ]
