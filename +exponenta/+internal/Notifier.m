@@ -48,7 +48,7 @@ classdef Notifier < handle
                     end
                 end
                 obj.UISnackbars = flipud(vertcat(notifications{:}));
-                pos = get(vertcat(obj.UISnackbars.Root), 'Position');
+                pos = get(vertcat(obj.UISnackbars.Root), {'Position'});
                 pos = uialign(vertcat(pos{:}), parent, 'center', 'top', true, [0 -15], 'VertDist', 5);
                 set(obj.UISnackbars, {'Position'}, num2cell(pos, 2));
                 arrayfun(@(s)s.redraw(), obj.UISnackbars);
