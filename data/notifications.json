@@ -1,63 +1,57 @@
 [
 	{
-		"code": "190912121523",
-		"message": "Вышел MATLAB R2019b!",
-		"theme": "success",
-		"duedate": "25-Oct-2019",
-		"checked": false,
-		"actions": [
-			[
-				"Что нового?",
-				"@(~,~)web(\"https:\/\/www.mathworks.com\/videos\/release-2019b-highlights-1567193571722.html\")"
-			],
-			[
-				"Скачать",
-				"@(~,~)web(\"https:\/\/www.mathworks.com\/downloads\/\")"
-			]
-		]
-	},
-	{
-		"code": "190820081932",
-		"message": "8 октября семинар по глубокому обучению\nпройдет в Санкт-Петербурге",
+		"code": "191110213631",
+		"message": "Уже 12 ноября пройдет семинар \"Разработка\nавтономных транспортных средств в MATLAB\"",
 		"theme": "info",
-		"duedate": "08-Oct-2019",
+		"duedate": "12-Dec-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/glubokie-nejronnye-seti-reshenie-prakticheskih-zadach-spb\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-avtonomnyh-transportnyh-sredstv-v-matlab\")"
 		]
 	},
 	{
-		"code": "191001100209",
-		"message": "10 октября семинар по глубокому обучению\nпройдет в Москве",
+		"code": "191110213800",
+		"message": "26 ноября Артем Багров проведет вебинарпо глубоким нейросетям в MATLAB",
 		"theme": "info",
-		"duedate": "10-Oct-2019",
+		"duedate": "26-Nov-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/kompyuternoe-zrenie-i-glubokoe-obuchenie-v-matlab\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/glubokie-seti-v-MATLAB\")"
 		]
 	},
 	{
-		"code": "191001100353",
-		"message": "15 октября Павел Рословец проведет вебинар\n\"Проектирование роботов-манипуляторов\"",
+		"code": "191110213938",
+		"message": "28 ноября Павел Кургуз проведет вебинар\nпо управленю аккумуляторной батареей",
 		"theme": "info",
-		"duedate": "15-Oct-2019",
+		"duedate": "28-Nov-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/proektirovanie-robotov-manipulyatorov\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-sistemy-upravleniya-akkumulyatornoj-batareej\")"
 		]
 	},
 	{
-		"code": "191001100541",
-		"message": "29 октября Марат Усс и Андрей Кисельников\nпроведут семинар \"Разработка систем связи\"",
+		"code": "191110214115",
+		"message": "3 декабря в Москве пройдет семинар\n о верификации ПО с помощью инструмента LDRA",
 		"theme": "info",
-		"duedate": "29-Oct-2019",
+		"duedate": "03-Dec-2019",
 		"checked": false,
 		"actions": [
 			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-sistem-svyazi\")"
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/verifikaciya-po-s-pomoshchyu-instrumentov-ldra\")"
+		]
+	},
+	{
+		"code": "191110214249",
+		"message": "17 декабря не пропустите вебинар\nпо Reinforcement Learning на основе нейросетей",
+		"theme": "info",
+		"duedate": "10-Dec-2020",
+		"checked": false,
+		"actions": [
+			"Подробности и регистрация",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/vvedenie-v-obuchenie-s-podkrepleniem-v-matlab\")"
 		]
 	},
 	{
