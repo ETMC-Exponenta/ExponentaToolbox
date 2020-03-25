@@ -1,65 +1,32 @@
 [
 	{
-		"code": "191110213631",
-		"message": "Уже 12 ноября пройдет семинар \"Разработка\nавтономных транспортных средств в MATLAB\"",
+		"code": "200325095154",
+		"message": "Вышел MATLAB R2020a!",
 		"theme": "info",
-		"duedate": "12-Dec-2019",
+		"duedate": "25-May-2020",
 		"checked": false,
 		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-avtonomnyh-transportnyh-sredstv-v-matlab\")"
+			"Что нового?",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/news\/R2020a\")"
 		]
 	},
 	{
-		"code": "191110213800",
-		"message": "26 ноября Артем Багров проведет вебинар\nпо глубоким нейросетям в MATLAB",
-		"theme": "info",
-		"duedate": "26-Nov-2019",
+		"code": "200325095425",
+		"message": "Успейте зарегистрироваться на нашу конференцию,\nкоторая пройдет ОНЛАЙН 1-16 апреля",
+		"theme": "warning",
+		"duedate": "16-Apr-2020",
 		"checked": false,
 		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/glubokie-seti-v-MATLAB\")"
-		]
-	},
-	{
-		"code": "191110213938",
-		"message": "28 ноября Павел Кургуз проведет вебинар\nпо управленю аккумуляторной батареей",
-		"theme": "info",
-		"duedate": "28-Nov-2019",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/razrabotka-sistemy-upravleniya-akkumulyatornoj-batareej\")"
-		]
-	},
-	{
-		"code": "191110214115",
-		"message": "3 декабря в Москве пройдет семинар\n о верификации ПО с помощью инструмента LDRA",
-		"theme": "info",
-		"duedate": "03-Dec-2019",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/verifikaciya-po-s-pomoshchyu-instrumentov-ldra\")"
-		]
-	},
-	{
-		"code": "191110214249",
-		"message": "17 декабря не пропустите вебинар\nпо Reinforcement Learning на основе нейросетей",
-		"theme": "info",
-		"duedate": "10-Dec-2020",
-		"checked": false,
-		"actions": [
-			"Подробности и регистрация",
-			"@(~,~)web(\"https:\/\/exponenta.ru\/events\/vvedenie-v-obuchenie-s-podkrepleniem-v-matlab\")"
+			"Зарегистрироваться",
+			"@(~,~)web(\"https:\/\/exponenta.ru\/news\/conf2020-online\")"
 		]
 	},
 	{
 		"code": "191001100752",
 		"message": "Больше мероприятий на сайте Экспоненты",
 		"theme": "success",
-		"duedate": "31-Dec-2019",
-		"checked": false,
+		"duedate": "31-Dec-2020",
+		"checked": true,
 		"actions": [
 			"Смотреть",
 			"@(~,~)web(\"https:\/\/exponenta.ru\/events\")"

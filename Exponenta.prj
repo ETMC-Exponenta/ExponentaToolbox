@@ -39,7 +39,7 @@ imgs</param.exclude.filters>
     <param.exported.on.package>false</param.exported.on.package>
     <param.required.addons>
       <requiredaddons>
-        <requiredAddOn downloadURL="https://github.com/roslovets/AppDesignerPro/raw/master/AppDesignerPro.mltbx" earliest="earliest" fromRepository="false" id="bb034114-16ea-40b4-a823-230b96b98792" include="true" latest="latest">App Designer Pro</requiredAddOn>
+        <requiredAddOn downloadURL="https://github.com/roslovets/AppDesignerPro/releases/download/v0.3.0/AppDesignerPro.mltbx" earliest="earliest" fromRepository="false" id="bb034114-16ea-40b4-a823-230b96b98792" include="true" latest="latest">App Designer Pro(2)</requiredAddOn>
       </requiredaddons>
     </param.required.addons>
     <param.matlab.project.id />
@@ -119,18 +119,18 @@ imgs</param.exclude.filters>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded>
-      <file>D:\MATLAB\jsonlab\base64decode.m</file>
-      <file>D:\MATLAB\jsonlab\base64encode.m</file>
-      <file>D:\MATLAB\jsonlab\fast_match_bracket.m</file>
-      <file>D:\MATLAB\jsonlab\isoctavemesh.m</file>
-      <file>D:\MATLAB\jsonlab\jdatadecode.m</file>
-      <file>D:\MATLAB\jsonlab\jsonopt.m</file>
-      <file>D:\MATLAB\jsonlab\loadjson.m</file>
-      <file>D:\MATLAB\jsonlab\match_bracket.m</file>
-      <file>D:\MATLAB\jsonlab\mergestruct.m</file>
-      <file>D:\MATLAB\jsonlab\nestbracket2dim.m</file>
-      <file>D:\MATLAB\jsonlab\savejson.m</file>
-      <file>D:\MATLAB\jsonlab\varargin2struct.m</file>
+      <file>E:\MATLAB\jsonlab\base64decode.m</file>
+      <file>E:\MATLAB\jsonlab\base64encode.m</file>
+      <file>E:\MATLAB\jsonlab\fast_match_bracket.m</file>
+      <file>E:\MATLAB\jsonlab\isoctavemesh.m</file>
+      <file>E:\MATLAB\jsonlab\jdatadecode.m</file>
+      <file>E:\MATLAB\jsonlab\jsonopt.m</file>
+      <file>E:\MATLAB\jsonlab\loadjson.m</file>
+      <file>E:\MATLAB\jsonlab\match_bracket.m</file>
+      <file>E:\MATLAB\jsonlab\mergestruct.m</file>
+      <file>E:\MATLAB\jsonlab\nestbracket2dim.m</file>
+      <file>E:\MATLAB\jsonlab\savejson.m</file>
+      <file>E:\MATLAB\jsonlab\varargin2struct.m</file>
     </fileset.depfun.excluded>
     <fileset.package />
     <build-deliverables>
@@ -138,7 +138,7 @@ imgs</param.exclude.filters>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2019b</root>
+      <root>E:\Program Files\MATLAB\R2020a</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
         <toolbox name="embeddedcoder" />
